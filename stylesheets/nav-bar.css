@@ -1,0 +1,36 @@
+.nav-bar{
+  position: fixed;
+  left:0px;
+  top:55px;
+  bottom:0px;
+  padding-top:10px;
+  width:72px;
+  display:flex;
+  background-color: white;
+  flex-direction: column;
+  z-index: 101;
+
+}
+.nav-buttons{
+  padding:0px;
+  display:flex;
+  height: 74px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:0;
+  background-color: white;
+  cursor:pointer;
+  flex-shrink: 0;
+
+}
+.nav-buttons:hover{
+  background-color: rgb(211, 211, 211);
+}
+.nav-buttons img{
+  width:25px;
+  margin-bottom:7px;
+}
+.nav-buttons p{
+  font-size: 10px;
+}
