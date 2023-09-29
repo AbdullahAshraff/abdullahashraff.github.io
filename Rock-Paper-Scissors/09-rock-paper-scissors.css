@@ -2,7 +2,9 @@ p{
   margin:0px;
   padding:0px;
 }
-
+button{
+  -webkit-tap-highlight-color: transparent;
+}
 body{
   background-color: rgb(45, 61, 76);
   color:white;
