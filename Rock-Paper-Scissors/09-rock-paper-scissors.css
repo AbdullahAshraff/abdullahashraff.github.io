@@ -171,18 +171,6 @@ body{
   width: fit-content;
 }
 
-@media (min-width:510px) {
-  .score-bar{
-    display:block;
-    position: relative;
-  }
-  .score-bar button{
-    position:absolute;
-    right:0px;
-    top:0px;
-    bottom:0px;
-  }
-}
 @media (min-width:500px) {
   .game-columns{
     width:425px;
