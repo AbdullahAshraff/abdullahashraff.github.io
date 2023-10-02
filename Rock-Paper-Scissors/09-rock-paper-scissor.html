@@ -9,35 +9,36 @@
 </head>
 
 <body>
-  <div class="title"> Rock Paper Scissors Game</div>
-  <div class="game-columns">
-    <div class='user-move-column'>
-      <button onclick="game('rock');">
-        <img src="..\footage\rock-emoji.png">
-      </button>
-      <button onclick="game('paper');">
-        <img src="..\footage\paper-emoji.png">
-      </button>
-      <button onclick="game('scissors');">
-        <img src="..\footage\scissors-emoji.png">
-      </button>
+  <div class="game-app">
+    <div class="title"> Rock Paper Scissors Game</div>
+    <div class="game-columns">
+      <div class='user-move-column'>
+        <button onclick="game('rock');">
+          <img src="..\footage\rock-emoji.png">
+        </button>
+        <button onclick="game('paper');">
+          <img src="..\footage\paper-emoji.png">
+        </button>
+        <button onclick="game('scissors');">
+          <img src="..\footage\scissors-emoji.png">
+        </button>
+      </div>
+      <div class='com-move-column'>
+        <div class="players-tip">Computer</div>
+        <div class="com-move-frame">
+          <img src="..\footage\question-emoji.png">
+        </div>
+      </div>
+
     </div>
-    <div class='com-move-column'>
-      <div class="players-tip">Computer</div>
-      <div class="com-move-frame">
-        <img src="..\footage\question-emoji.png">
+    <div class="end-div">
+      <p class="js-result result">&nbsp;&nbsp;</p>
+      <div class="score-bar">
+        <p class="js-score score"></p>
+        <button onclick="reset();">Reset</button>
       </div>
     </div>
-
   </div>
-  <div class="end-div">
-    <p class="js-result result"></p>
-    <div class="score-bar">
-      <p class="js-score score"></p>
-      <button onclick="reset();">Reset</button>
-    </div>
-  </div>
-  
   <script src="09-rock-paper-scissors.js"></script>
 </body>
 

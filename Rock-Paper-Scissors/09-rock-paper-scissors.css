@@ -2,6 +2,7 @@ p{
   margin:0px;
   padding:0px;
 }
+
 button{
   -webkit-tap-highlight-color: transparent;
 }
@@ -12,14 +13,17 @@ body{
   text-align: center;
   padding: 0px;
   margin:0px;
+}
+.game-app{
 
+  box-sizing: border-box;
   position:absolute;
   top:0px; bottom: 0px; right:0px; left:0px;
 
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-
+  
   min-width: 320px;
   min-height: 600px;
 }
@@ -41,6 +45,7 @@ body{
   align-items: center;
   justify-content:space-around;
   padding: 20px 10px;
+  box-sizing: border-box;
 }
 
 .user-move-column{
@@ -102,6 +107,8 @@ body{
 .game-columns img{
   height: 9vh;
   width: 9vh;
+  min-width: 55px;
+  min-height: 55px;
 }
 .com-move-column img{
   rotate: -90deg;
@@ -124,22 +131,19 @@ body{
 
 .result{
   font-size: 40px;
+  padding: 20px 15px;
 }
 .result-tie{
-  padding: 20px 15px;
   color:wheat;
 }
 .result-won{
-  padding: 20px 15px;
   color:rgb(0, 255, 0);
 }
 .result-lost{
-  padding: 20px 15px;
   color:rgb(255, 33, 33);
 
 }
 .result-waiting{
-  padding: 20px 15px;
   color:wheat;
 }
 
@@ -179,9 +183,29 @@ body{
     bottom:0px;
   }
 }
-@media (min-width:425px) {
+@media (min-width:500px) {
   .game-columns{
-    width:420px;
+    width:425px;
     align-self: center;
   }
+  html{
+    height:100%;
+    width: 100%;
+  }
+  body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .game-app{
+    height:99%;
+    width: 90%;
+    max-width: 500px;
+    position: static;
+    border: solid 2px gray;
+    border-radius: 20px;
+    overflow:hidden;
+  } 
 }

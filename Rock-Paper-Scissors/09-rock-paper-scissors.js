@@ -90,7 +90,6 @@ function reset(){
   document.querySelector('.com-move-frame').innerHTML = imgdict['question'];
   document.querySelector('.js-result').innerHTML = "";
   document.querySelector('.js-score').innerHTML = `Wins: ${ob.wins} Ties:${ob.ties} Loses: ${ob.loses}`;
-
   let allButton = document.querySelectorAll('.user-move-column button')
   allButton.forEach(element => {
     element.classList.remove('move-selected')
