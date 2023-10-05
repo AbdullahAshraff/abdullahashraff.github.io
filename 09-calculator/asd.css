@@ -1,0 +1,90 @@
+body {
+  --l: 50px;
+  --gap: 10px;
+
+  /* --highlight-color: orange;
+  --highlight-color2: rgb(212, 138, 0);
+  --highlight-color3: rgb(143, 93, 0);
+  --default-color: rgb(230, 230, 230);
+  --default-color2: rgb(185, 185, 185);
+  --default-color3: rgb(139, 139, 139);
+  --result-color: red;
+  --whole-bck-color: white; */
+  
+
+  background-color: var(--whole-bck-color);
+  position: absolute;
+  top: 0px;  bottom: 0px;  left: 0px;  right: 0px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-div {
+  width: fit-content;
+  padding: calc(var(--gap) * 2);
+  border: solid 4px var(--main-border);
+  margin: 10px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.screen {
+  display: flex;
+  justify-content: left;
+  box-sizing: border-box;
+  padding: 7px 15px;
+  overflow: auto;
+  margin-bottom: calc(var(--gap) * 2);
+  width: calc(var(--l) * 4 + var(--gap) * 3);
+  height: calc(var(--l) * 2);
+  background-color: var(--default-color);
+  color:var(--button-text-color);
+  border: none;
+  border-radius: 20px;
+  font-size: 25px;
+}
+.screen-result{
+  color: var(--result-color)
+}
+
+
+
+.number-pad {
+  display: grid;
+  /* grid-template-columns: var(--l) var(--l) var(--l) var(--l); */ /*embedded in js*/
+  row-gap: var(--gap);
+  column-gap: var(--gap);
+}
+
+.symbol-button,
+.number-button {
+  background-color: var(--default-color);
+  height: var(--l);
+  border: none;
+  border-radius: 100px;
+  font-size: 30px;
+  cursor: pointer;
+  color:var(--button-text-color);
+}
+.number-button:hover {
+  background-color: var(--default-color2);
+}
+.number-button:active {
+  background-color: var(--default-color3);
+}
+
+.symbol-button {
+  background-color: var(--highlight-color);
+}
+.symbol-button:hover {
+  background-color: var(--highlight-color2);
+}
+.symbol-button:active {
+  background-color: var(--highlight-color3);
+}
