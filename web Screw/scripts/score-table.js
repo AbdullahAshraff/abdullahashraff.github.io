@@ -1,6 +1,13 @@
 const table = document.createElement('table');
 table.setAttribute('id', 'score-table');
-document.querySelector('main').appendChild(table);
+
+const tableFrame = document.createElement('div');
+tableFrame.setAttribute('id','table-frame');
+
+tableFrame.appendChild(table);
+document.querySelector('main').insertBefore(tableFrame,document.querySelector('.after-table'));
+
+
 let num_rows_initial = 3;
 let num_cols = 3;
 

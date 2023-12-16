@@ -5,14 +5,15 @@ html{
   direction: rtl;
 }
 body{
-  /* box-sizing: border-box; */
   font-size:25px;
-  /* overflow-x: scroll; */
 }
-
+#table-frame{
+  margin:10px 0px;
+  max-width: 100vw;
+  overflow:auto;
+}
 #score-table{
   table-layout: auto;
-  width:100vw;
   overflow:scroll;
   text-align: center;
   border-spacing: 10px;
@@ -29,18 +30,17 @@ body{
 .round-col{
 
 }
-
-.player-name-cell{
-  /* border:solid 2px transparent; */
-  /* border-image: linear-gradient(-90deg,rgb(0, 136, 255),rgb(0, 136, 255),rgba(4, 138, 255, 0.155),rgba(4, 138, 255, 0)) 10;
-  border-left:none;
+.btn-add{
+  background-color: greenyellow;
   border-radius: 100px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px; */
+  font-size: 1em;
+  padding: 5px 15px;
   
+
+}
+.player-name-cell{
 }
 .player-name-input{
-  
   color:white;
   border:none;
   text-align: center;
@@ -63,6 +63,7 @@ body{
 }
 
 .score-cell{
+
 }
 .score-input{
   color:white;
