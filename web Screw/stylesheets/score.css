@@ -1,0 +1,89 @@
+
+html{
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+}
+body{
+  /* box-sizing: border-box; */
+  font-size:25px;
+  /* overflow-x: scroll; */
+}
+
+#score-table{
+  table-layout: auto;
+  width:100vw;
+  overflow:scroll;
+  text-align: center;
+  border-spacing: 10px;
+}
+.score-row{
+  width: fit-content;
+}
+.header-row{
+}
+
+.header-col{
+
+}
+.round-col{
+
+}
+
+.player-name-cell{
+  /* border:solid 2px transparent; */
+  /* border-image: linear-gradient(-90deg,rgb(0, 136, 255),rgb(0, 136, 255),rgba(4, 138, 255, 0.155),rgba(4, 138, 255, 0)) 10;
+  border-left:none;
+  border-radius: 100px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px; */
+  
+}
+.player-name-input{
+  
+  color:white;
+  border:none;
+  text-align: center;
+  font-size:1em;
+  background-color: transparent;
+  padding: 0.2ex 0.5ex;
+  width: 12ex;
+  text-align: right;
+  background-image:linear-gradient(90deg,rgb(34, 1, 201),rgb(158, 1, 201) 90%);
+  border-radius: 15px;
+}
+.player-name-input:focus{
+  background-image:linear-gradient(-90deg,rgb(1, 108, 201),rgb(1, 108, 201,0));
+  color:rgb(255, 242, 147);
+}
+
+.score-input:focus{
+  background-color: hsl(286, 100%, 40%);
+  color:rgb(238, 255, 0);
+}
+
+.score-cell{
+}
+.score-input{
+  color:white;
+  border:none;
+  text-align: center;
+  font-size:1em;
+  background-color: hsl(286, 96%, 22%);
+  width:5ex;
+  padding: 0.2ex 0.5ex;
+  
+  border-radius: 6px;
+
+}
+.score-input::-webkit-outer-spin-button,
+.score-input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.round-name-cell{
+  font-size: 1em;
+  font-weight: bold;
+}
+
