@@ -18,7 +18,7 @@ const CARDS = [
   ['كعب داير', 'شوف ورقة من عندك ومن عند كل واحد', 'kaab.png'],
 ];
 
-const FOLDER = '../footages/cards/'
+const FOLDER = '/footages/cards/'
 const main_rules_page = document.querySelector('main');
 const CARD_GRID = document.getElementById('card-grid');
 main_rules_page.appendChild(CARD_GRID)
