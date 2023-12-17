@@ -39,7 +39,7 @@ function makeRoundNameCell() {
 function makeTotalCell(rowNumber) {
   const totalCell = document.createElement('td');
   totalCell.setAttribute('class',`total-cell`);
-  totalCell.setAttribute('id',`cell-${rowNumber}-total`);
+  totalCell.setAttribute('row-num',`${rowNumber}`);
   totalCell.innerText='0'
   return totalCell;
 }
@@ -58,7 +58,7 @@ function makePlayerNameCell() {
   playerNameInput.setAttribute('class','player-name-input');
   const playerName = `اللاعب ${players_names.length + 1}`;
   players_names.push(playerName);
-  playerNameInput.value = playerName;
+  playerNameInput.placeholder = playerName;
   playerNameCell.appendChild(playerNameInput);
   return playerNameCell;
 }
@@ -73,8 +73,27 @@ function makeScoreCell(idx,row_or_col) {
   scoreCell.setAttribute('class','score-cell');
   const scoreInput = document.createElement('input');
   scoreInput.setAttribute('class','score-input');
-  scoreInput.setAttribute('type', 'number');
-  scoreInput.setAttribute('id',(row_or_col==='col')?`cell-${players_names.length}-${idx+1}`:`cell-${idx}-${num_cols+1}`)
+  const row_num = (row_or_col==='col')?`${players_names.length}`:`${idx}`;
+  const col_num = (row_or_col==='col')?`${idx+1}`:`${num_cols+1}`;
+  scoreInput.setAttribute('row-num',row_num);
+  scoreInput.setAttribute('col-num',col_num);
+
+  
+  scoreInput.setAttribute('type', 'text');
+  scoreInput.setAttribute('inputmode','numeric');
+  scoreInput.setAttribute('maxlength','3');
+  // scoreInput.setAttribute('pattern', '[1-9]{1,3}');
+
+
+  scoreInput.onkeyup = () => {
+    updateTotalCell(row_num);
+  };
+
+  scoreInput.onchange = () => {
+    const x =scoreInput.value;
+    scoreInput.value = parseInt(x) ||( (x==0)? 0:'');
+    updateTotalCell(row_num);
+  };
 
   scoreCell.appendChild(scoreInput);
   return scoreCell;
@@ -151,6 +170,17 @@ function makingFirstRow(){
   table.appendChild(row);
 }
 
+
+function updateTotalCell(row_num){
+  const rowCells = document.querySelectorAll(`.score-input[row-num='${row_num}']`);
+  const totalCell = document.querySelector(`.total-cell[row-num='${row_num}']`);
+
+  let sum =0;
+  for(let i=0;i<rowCells.length;i++){
+    sum+=parseInt(rowCells[i].value) || 0;
+  }
+  totalCell.innerText = sum || 0;
+}
+
 makingFirstRow();
 for (let i = 0; i < num_rows_initial; i++) { addRow(); }
-addingTotalColumn();

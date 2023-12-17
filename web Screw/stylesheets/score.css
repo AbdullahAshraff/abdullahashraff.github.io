@@ -4,9 +4,6 @@ html{
   justify-content: center;
   direction: rtl;
 }
-body{
-  font-size:25px;
-}
 #table-frame{
   margin:10px 0px;
   margin-bottom:30px;
@@ -55,6 +52,13 @@ body{
   text-align: right;
   background-image:linear-gradient(90deg,rgb(34, 1, 201),rgb(158, 1, 201) 90%);
   border-radius: 15px;
+}
+.player-name-input::placeholder{
+  color:inherit;
+}
+.player-name-input:focus::placeholder{
+  color:inherit;
+  opacity: 0.4;
 }
 .player-name-input:focus{
   background-image:linear-gradient(-90deg,rgb(1, 108, 201),rgb(1, 108, 201,0));

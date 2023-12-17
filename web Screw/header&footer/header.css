@@ -10,7 +10,7 @@ body{
 }
 header{
   box-sizing: border-box;
-  height: 120px;
+  height: var(--header-height);
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,6 @@ header{
 }
 header img{
   height: 100px;
-  width: 100px;
 }
 nav a{
   color: white;
@@ -34,6 +33,7 @@ nav a:hover {
 @media (max-width:425px){
   header{
     padding:30px;
+    justify-content: space-around;
   }
   ul{
     display: flex;
@@ -45,10 +45,15 @@ nav a:hover {
     margin: 0px;
     font-size:0.6em;
   }
+  
+  header img{
+    height: 80px;
+  }
 }
 @media (max-width:690px) and (min-width:425px){
   header{
     padding:30px;
+    
   }
   ul{
     display: flex;

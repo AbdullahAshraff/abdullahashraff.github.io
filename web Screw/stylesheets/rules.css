@@ -63,6 +63,7 @@
 .card-back{
   padding:0px 10px;
   transform: rotateY(180deg);
+  overflow:auto;
 }
 
 .card-img{
