@@ -1,5 +1,12 @@
 body {
   margin: 0px;
-  height: 100px;
-  background-color: aqua;
+  height: 60px;
+  background-color: rgb(49, 19, 57);
+  text-align: center;
+  background-color: rgb(49, 38, 57);
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  color:gray;
+  font-size: 17px;
 }

@@ -1,17 +1,4 @@
 
-html{
-  display: flex;
-  justify-content: center;
-}
-body{
-
-  padding-top: 200px;
-  padding-bottom: 100px;
-  text-align: center;
-  direction: rtl;
-  height: fit-content;
-  --borde : 10px;
-}
 
 #card-grid{
   display:grid;
@@ -40,8 +27,10 @@ body{
 }
 .card{
 
-  height:150px;
-  width:100px;
+  --height: 170px;
+
+  height:var(--height);
+  width:calc(var(--height)/3*2);
   perspective: 400px;
   
 }
@@ -83,19 +72,19 @@ body{
 .card_title{
   padding: 5px 5px;
   margin:10px 0px;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
   direction: ltr;
   background-color: purple;
   border-radius: 6px;
 }
 .card_title_long{
-  font-size: 1.2rem;
+  font-size: 1em;
 
 }
 .card_desc{
-
-  margin:10px;
+  font-size:0.8em;
+  margin:5px;
 }
 .para{
   margin:0px;

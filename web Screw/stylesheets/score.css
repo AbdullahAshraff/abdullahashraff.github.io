@@ -9,6 +9,7 @@ body{
 }
 #table-frame{
   margin:10px 0px;
+  margin-bottom:30px;
   max-width: 100vw;
   overflow:auto;
 }
@@ -17,6 +18,9 @@ body{
   overflow:scroll;
   text-align: center;
   border-spacing: 10px;
+}
+.after-table{
+  margin-bottom:40px;
 }
 .score-row{
   width: fit-content;
@@ -88,3 +92,13 @@ body{
   font-weight: bold;
 }
 
+.total-cell{
+  
+  color:white;
+  text-align: center;
+  font-size:1em;
+  background-color: hsl(184, 96%, 22%);
+  width:5ex;
+  padding: 0.2ex 0.5ex;
+  border-radius: 6px;
+}

@@ -8,7 +8,7 @@ tableFrame.appendChild(table);
 document.querySelector('main').insertBefore(tableFrame,document.querySelector('.after-table'));
 
 
-let num_rows_initial = 3;
+const num_rows_initial = 3;
 let num_cols = 3;
 
 const num_to_arabic = {
@@ -36,6 +36,13 @@ function makeRoundNameCell() {
   roundNameCell.innerText = roundName;
   return roundNameCell;
 }
+function makeTotalCell(rowNumber) {
+  const totalCell = document.createElement('td');
+  totalCell.setAttribute('class',`total-cell`);
+  totalCell.setAttribute('id',`cell-${rowNumber}-total`);
+  totalCell.innerText='0'
+  return totalCell;
+}
 
 function makeSpaceCell() {
   const roundNameCell = document.createElement('th');
@@ -55,33 +62,39 @@ function makePlayerNameCell() {
   playerNameCell.appendChild(playerNameInput);
   return playerNameCell;
 }
-
-function makeScoreCell() {
+function makeTotalNameCell(){
+  const totalNameCell = document.createElement('th');
+  totalNameCell.innerText = 'المجموع';
+  totalNameCell.setAttribute('id','total-name-cell');
+  return totalNameCell;
+}
+function makeScoreCell(idx,row_or_col) {
   const scoreCell = document.createElement('td');
   scoreCell.setAttribute('class','score-cell');
   const scoreInput = document.createElement('input');
   scoreInput.setAttribute('class','score-input');
   scoreInput.setAttribute('type', 'number');
+  scoreInput.setAttribute('id',(row_or_col==='col')?`cell-${players_names.length}-${idx+1}`:`cell-${idx}-${num_cols+1}`)
+
   scoreCell.appendChild(scoreInput);
   return scoreCell;
 }
 
-function getCell(typeOfCells) {
-  let res_cell;
+function getCell(typeOfCells,rowNumber =0) {
   switch (typeOfCells) {
     case 'score':
-      res_cell = makeScoreCell();
-      break;
+      return makeScoreCell();
     case 'player':
-      res_cell = makePlayerNameCell();
-      break;
+      return makePlayerNameCell();
     case 'round':
-      res_cell = makeRoundNameCell();
-      break;
+      return makeRoundNameCell();
+    case 'total':
+      return makeTotalCell(rowNumber);
     case 'space':
-      res_cell = makeSpaceCell();
+      return makeSpaceCell();
+    case 'totalName':
+      return makeTotalNameCell();
   }
-  return res_cell;
 }
 
 /**
@@ -92,8 +105,9 @@ function addRow() {
   row.setAttribute('class','score-row');
   row.appendChild(getCell('player'));
   for (let i = 0; i < num_cols; i++) {
-    row.appendChild(getCell('score'));
+    row.appendChild(makeScoreCell(i,'col'));
   }
+  row.appendChild(getCell('total',players_names.length));
   table.appendChild(row);
 }
 
@@ -104,9 +118,9 @@ function addRow() {
  */
 function addCol() {
   const all_rows = document.querySelectorAll('#score-table tr');
-  all_rows[0].appendChild(getCell('round'));
+  all_rows[0].insertBefore(getCell('round'),all_rows[0].querySelector('#total-name-cell'));
   for (let i = 1; i < all_rows.length; i++) {
-    all_rows[i].appendChild(getCell('score'));
+    all_rows[i].insertBefore(makeScoreCell(i,'row'),all_rows[i].querySelector('.total-cell'));
   }
   num_cols++;
   addingColGroup();
@@ -133,8 +147,10 @@ function makingFirstRow(){
     row.appendChild(getCell('round'));
     addingColGroup();
   }
+  row.appendChild(getCell('totalName'))
   table.appendChild(row);
 }
 
 makingFirstRow();
 for (let i = 0; i < num_rows_initial; i++) { addRow(); }
+addingTotalColumn();
