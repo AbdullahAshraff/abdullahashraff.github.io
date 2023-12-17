@@ -43,6 +43,7 @@ nav a:hover {
   nav li {
     display:list-item;
     margin: 0px;
+    font-size:0.6em;
   }
 }
 @media (max-width:690px) and (min-width:425px){
