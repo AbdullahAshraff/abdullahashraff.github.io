@@ -3,7 +3,6 @@ body {
   background-color: rgb(49, 19, 57);
   text-align: center;
   background-color: rgb(49, 38, 57);
-  font-family: Arial, Helvetica, sans-serif;
 }
 footer{
   height: var(--footer-height);

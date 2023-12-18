@@ -170,6 +170,25 @@ function makingFirstRow(){
   table.appendChild(row);
 }
 
+function clearScores(){
+  const allScoreCells = document.querySelectorAll('.score-input');
+  for (let i =0;i<allScoreCells.length;i++){
+    allScoreCells[i].value = '';
+  }
+  const allTotalCells = document.querySelectorAll('.total-cell');
+  for (let i =0;i<allScoreCells.length;i++){
+    allTotalCells[i].innerText = 0;
+  }
+
+}
+
+function deleteRow(){
+  const last_row_cells = document.querySelectorAll('')
+}
+function deleteCol(){
+
+}
+
 
 function updateTotalCell(row_num){
   const rowCells = document.querySelectorAll(`.score-input[row-num='${row_num}']`);
@@ -184,3 +203,6 @@ function updateTotalCell(row_num){
 
 makingFirstRow();
 for (let i = 0; i < num_rows_initial; i++) { addRow(); }
+
+
+
