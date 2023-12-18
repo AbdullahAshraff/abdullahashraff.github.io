@@ -51,7 +51,7 @@ html{
   width: 12ex;
   text-align: right;
   background-image:linear-gradient(90deg,rgb(34, 1, 201),rgb(158, 1, 201) 90%);
-  border-radius: 15px;
+  border-radius: 150px;
 }
 .player-name-input::placeholder{
   color:inherit;

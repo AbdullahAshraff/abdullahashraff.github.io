@@ -26,8 +26,8 @@ body{
   direction: rtl;
   margin: 0px;
   position: relative;
-  padding-top: 120px;
-  padding-bottom: 60px;
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
   height: fit-content;
   box-sizing: border-box;
   min-height: 100vh;

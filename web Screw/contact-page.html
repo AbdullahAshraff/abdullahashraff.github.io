@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/for-all.css">
     <link rel="stylesheet" href="stylesheets/general.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
     <title>Document</title>
     <h1>تواصل</h1>
 </head>
@@ -13,15 +14,33 @@
 <body>
     <iframe class="header-iframe" src="header&footer/header.html" scrolling="no"></iframe>
     <main>
-        <h2>جهات الاتصال الخاصة بنا</h2>
-        <p>إذا كانت لديك أي أسئلة أو استفسارات ، فلا تتردد في التواصل معنا.</p>
-        <ul>
-            <li>Email: <a href="mailto:abdelrahman.ghetany@ejust.edu.eg"> البشمهندس عبدالرحمن احمد</a></li>
-            <li>Email: <a href="mailto:abdullah.ashraf.real@gmail.com"> البشمهندس عبدالله اشرف</a></li>
-            <li>Address: BorgAlarab, E-Just</li>
-        </ul>
+        <!-- <h2>جهات الاتصال الخاصة بنا</h2> -->
+        <p>يمكنك التواصل معنا او ارسال اقتراحات لاضافتها للموقع، اترك لنا رسالتك </p>
 
+        <form
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeWcMw8POGzxzAk6QE_KfztY4D4PbymEDLeoRvkhshvDQv1ng/formResponse?usp=pp_url"
+            method="post" target="hidden_iframe" id="contact-form">
+            <input id='category-input' type="text" name="entry.1537986246" value='اقتراح' required hidden>
+            <ul>
+                <li>
+                    <label for="email-input">البريد الالكتروني:</label>
+                    <input id='email-input' type="email" name="entry.1870951658" required>
+                </li>
+                <li>
+                    <!-- <label for="email-input"></label> -->
+                    <label for="title-input">عنوان الرسالة:</label>
+                    <input id='title-input' type="text" name="entry.113687613" required>
+                </li>
+                <li>
+                    <label for="message-input">موضوع الرسالة:</label>
+                    <textarea id='message-input' rows="5" name="entry.1438480475" required></textarea>
+                </li>
+            </ul>
+            <input type="submit" value="إرسال">
+        </form>
 
+        <!-- Hidden iframe to handle form submission without opening the Google Form page -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     </main>
     <iframe class="footer-iframe" src="header&footer/footer.html" scrolling="no"></iframe>
