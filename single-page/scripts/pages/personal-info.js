@@ -1,5 +1,7 @@
-export function renderPersonal(){
- document.querySelector('main').innerHTML = `
+import { renderPasswordPage } from "./password.js";
+
+export function renderPersonal() {
+    document.querySelector('main').innerHTML = `
  
         <div class="page-title"> Register</div>
         <form id="personal-info-form" method="GET">
@@ -22,5 +24,8 @@ export function renderPersonal(){
                 </div>
             </div>
             <button class="next-button">Next</button>
-        </form>`
+        </form>`;
+    document.querySelector('.next-button').addEventListener('click', () => {
+        renderPasswordPage();
+    });
 }
