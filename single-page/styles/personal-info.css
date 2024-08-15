@@ -1,0 +1,35 @@
+#personal-info-form{
+    display: flex;
+    flex-direction: column;
+}
+#personal-info-form input{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 2px rgb(209, 209, 209);
+    border-radius: 4px;
+}
+#personal-info-form label{
+    color:rgb(92, 92, 92);
+    margin-bottom: 5px;
+}
+.name-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+.field-container{
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+}
+
+#birth-day{
+    width: 3em;
+}
+#birth-month{
+    width: 3em;
+}
+#birth-year{
+    width: 4em;
+}
