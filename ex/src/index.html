@@ -6,37 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>C-Smarx Website</title>
   <link rel="stylesheet" href="output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body class="text-gray-800">
+<body class="text-gray-800 font-sans">
 
   <!-- Hero Section -->
-  <section class="flex bg-white py-20  px-12">
-    <div class="container mx-auto px-6 text-left">
-      <div class="container mx-auto flex justify-between items-center mb-5">
+  <section class="flex flex-col lg:flex-row bg-white py-5 lg:py-20  px-6 lg:px-12">
+    <div class="container text-left">
+      <div class="container flex justify-between items-center mb-5">
         <img src="img/logo.png" alt="C-Smarx Logo" class="h-14">
       </div>
-      <h1 class="text-4xl font-bold text-black mb-4 leading-snug">
+      <h1 class="text-3xl sm:text-4xl font-bold text-black mb-4 leading-normal">
         Embrace
         <span class="text-blue-600">Simplicity</span>,
         <span class="text-blue-600">Maximize</span>
         Effectiveness
       </h1>
-      <p class="text-lg text-gray-500 mb-14">
+      <p class="text-md md:text-lg text-gray-500 mb-8 md:mb-14">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil rerum omnis minima vitae qui dolorem
         expedita enim, animi fugiat commodi magni natus harum assumenda impedit architecto laborum error laudantium.
       </p>
       <button class="bg-white text-blue-600 border-2 border-blue-600  px-6 py-2 rounded-md">Request a demo</button>
     </div>
-    <div class="container mx-auto mt-10">
+    <div class="container mt-10">
       <img src="img/students Embrace Simplicity, Maximize Effectiveness.png" alt="Students Embracing Simplicity"
         class="mx-auto w-full max-w-md rounded-lg shadow-md">
     </div>
   </section>
 
   <!-- Features Section -->
-  <section class="py-20 bg-speGray px-12 flex">
-    <div class="container mx-auto px-6 text-left">
+  <section class="flex flex-col lg:flex-row bg-speGray py-5 lg:py-20 px-6 lg:px-12">
+    <div class="container mx-auto text-left mt-4">
       <h2 class="text-3xl font-bold mb-8">Grow Hand In <span class="text-blue-600">Hand</span> With The Team</h2>
       <p class="text-lg mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolores veniam sapiente
         nam nihil modi illo tenetur suscipit.</p>
@@ -79,8 +82,8 @@
   </section>
 
   <!-- Call to Action Section -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto px-6 text-center">
+  <section class="py-5 lg:py-20 px-6 pt-12 lg:px-12 bg-white">
+    <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-8">Discover The Power Of Integrated ERP Solutions With C-Smarx</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -105,11 +108,12 @@
   </section>
 
   <!-- Footer Section -->
-  <footer class="px-12 bg-white text-center pb-12">
-    <div class="container bg-speGray rounded-xl mx-auto p-6 ">
-      <p class="text-lg mb-4 font-bold">Transform Your Educational Management <br> Through One Secure ERP Solution.</p>
+  <footer class="py-0 lg:py-20 px-0 lg:px-12 bg-white text-center">
+    <div class="py-10 bg-speGray rounded-none lg:rounded-xl p-12 lg:p-6 w-full">
+      <p class="text-lg font-bold mb-6">Transform Your Educational Management <br> Through One Secure ERP Solution.</p>
 
-      <button class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-2 rounded-md ">Contact Us</button>
+      <button class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-2 rounded-md lg:text-xl">Contact Us</button>
+
     </div>
   </footer>
 </body>
