@@ -8,11 +8,11 @@ let scoreStr = function () {
   return `Wins:${ob.wins} Ties:${ob.ties} Loses:${ob.loses}`
 };
 let imgdict = {
-  rock: '<img src="..\\footage\\rock-emoji.png" alt="rock">',
-  paper: '<img src="..\\footage\\paper-emoji.png" alt="paper">',
-  scissors: '<img src="..\\footage\\scissors-emoji.png" alt="scissors">',
-  question: '<img src="..\\footage\\question-emoji.png" alt="unknown">',
-  animated: '<img src="..\\footage\\fourthTry.gif" alt="waiting" style="">',
+  rock: '<img src="footage\\rock-emoji.png" alt="rock">',
+  paper: '<img src="footage\\paper-emoji.png" alt="paper">',
+  scissors: '<img src="footage\\scissors-emoji.png" alt="scissors">',
+  question: '<img src="footage\\question-emoji.png" alt="unknown">',
+  animated: '<img src="footage\\fourthTry.gif" alt="waiting" style="">',
 };
 
 const allUserButtons = {
